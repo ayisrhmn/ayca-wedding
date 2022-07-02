@@ -1,5 +1,5 @@
-// import '../styles/globals.css';
-// import '../styles/main.css';
+import '../styles/globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import {ToastContainer} from 'react-toastify';
@@ -18,6 +18,16 @@ function MyApp({Component, pageProps}: AppProps) {
           rel="stylesheet"
         />
       </Head>
+      <script
+        src="https://unpkg.com/react/umd/react.production.min.js"
+        crossOrigin="true"></script>
+      <script
+        src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+        crossOrigin="true"></script>
+      <script
+        src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+        crossOrigin="true"></script>
+      <script>var Alert = ReactBootstrap.Alert;</script>
       <Component {...pageProps} />
       <ToastContainer />
     </>
