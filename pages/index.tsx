@@ -1,9 +1,13 @@
 import React from 'react';
 import AOS from 'aos';
 import FrontCover from '../components/front-cover';
+import {useRouter} from 'next/router';
 
 const Home = () => {
+  const router = useRouter();
   const [showCover, setShowCover] = React.useState(true);
+
+  const {to} = router.query;
 
   React.useEffect(() => {
     AOS.init();
@@ -17,7 +21,7 @@ const Home = () => {
         <FrontCover
           femaleName="Rika"
           maleName="Fariz"
-          guestName="Uzumaki Saruto"
+          guestName={`${to}`}
           onClick={() => setShowCover(false)}
         />
       ) : (
