@@ -21,10 +21,14 @@ const FrontCover = (props: FrontCoverProps) => {
               <h4 className="mb-1 text-center text-white wd-couplename font-weight-bold">
                 {props.femaleName} & {props.maleName}
               </h4>
-              <p className="mb-1 text-center wd-for-txt">Untuk</p>
-              <p className="mb-3 text-center text-white wd-guestname">
-                {props.guestName}
-              </p>
+              {props.guestName.length !== 0 && (
+                <>
+                  <p className="mb-1 text-center wd-for-txt">Untuk</p>
+                  <p className="mb-3 text-center text-white wd-guestname">
+                    {props.guestName}
+                  </p>
+                </>
+              )}
               <div className="d-flex justify-content-center">
                 <Button
                   variant="light"

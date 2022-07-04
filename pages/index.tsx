@@ -5,15 +5,19 @@ import {useRouter} from 'next/router';
 
 const Home = () => {
   const router = useRouter();
-  const [showCover, setShowCover] = React.useState(true);
+  const {place, to} = router.query;
 
-  const {to} = router.query;
+  const [showCover, setShowCover] = React.useState(true);
+  const [guestName, setGuestName] = React.useState('');
+  const [placeName, setPlaceName] = React.useState('');
 
   React.useEffect(() => {
     AOS.init();
+    setGuestName(to !== undefined ? `${to}` : '');
+    setPlaceName(place !== undefined ? `${place}` : '');
 
     return () => {};
-  }, []);
+  }, [place, to]);
 
   return (
     <>
@@ -21,7 +25,7 @@ const Home = () => {
         <FrontCover
           femaleName="Rika"
           maleName="Fariz"
-          guestName={`${to}`}
+          guestName={guestName}
           onClick={() => setShowCover(false)}
         />
       ) : (
