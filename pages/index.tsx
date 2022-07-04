@@ -29,7 +29,10 @@ const Home = () => {
           onClick={() => setShowCover(false)}
         />
       ) : (
-        <div className="aycawd-fullbg-2" data-aos="flip-left"></div>
+        <div
+          className="aycawd-fullbg-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"></div>
       )}
     </>
   );

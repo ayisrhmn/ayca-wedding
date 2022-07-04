@@ -10,7 +10,10 @@ interface FrontCoverProps {
 
 const FrontCover = (props: FrontCoverProps) => {
   return (
-    <div className="aycawd-fullbg" data-aos="fade-down">
+    <div
+      className="aycawd-fullbg"
+      data-aos="fade-down"
+      data-aos-duration="1000">
       <Container>
         <Row>
           <Col md={12} className="d-flex justify-content-center">
