@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../styles/responsive.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';

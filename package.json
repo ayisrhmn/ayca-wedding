@@ -8,11 +8,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/react-slick": "^0.23.8",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "aos": "^2.3.4",
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
     "classnames": "^2.3.1",
+    "moment": "^2.29.3",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-bootstrap": "^2.4.0",
