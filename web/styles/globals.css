@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif !important;
+  letter-spacing: 0.8px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* scrollbar css */
+::-webkit-scrollbar {
+  width: 11px;
+  background-color: #a19b9d;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f5dfb5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0c99d;
+}
+/* end region */
+
+.aycawd-fullbg {
+  height: 100vh;
+  background: url('/img/front-cover.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+.wd-title {
+  font-size: 14px;
+}
+
+.wd-couplename {
+  font-size: 40px;
+  font-family: 'Parisienne', cursive !important;
+}
+
+.wd-for-txt {
+  font-size: 18px;
+  color: #e0c99d;
+}
+
+.wd-guestname {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.btn-open-invit {
+  background-color: #e0c99d !important;
+  border-color: #e0c99d !important;
+  border-radius: 50px !important;
+}
+
+.btn-open-invit:hover {
+  background-color: #f5dfb5 !important;
+  border-color: #f5dfb5 !important;
+}
+
+.welcome-content {
+  position: absolute;
+  bottom: 4rem;
+}
+
+.welcome-fullbg {
+  height: 100vh;
+  background: url('/img/welcome-bg.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+.welcome-wd-place {
+  font-size: 12px;
+}
+
+.prayer-section,
+.event-section {
+  background-image: linear-gradient(#d2ccce, #a19b9d);
+}
+
+.prayer-card {
+  border-color: #a6a8a2 !important;
+  border-radius: 18px !important;
+  background-image: linear-gradient(#a19b9d, #676163);
+  padding: 70px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.prayer-section .title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.prayer-section .text {
+  font-size: 16px;
+  line-height: 1.8rem;
+  color: #fff;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.ico-flower {
+  height: 8rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.couple-section,
+.countdown-section {
+  background-color: #8a8486;
+}
+
+.couple-section .title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.couple-section .couple-img {
+  height: 24rem;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.couple-section .couple-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.couple-section .desc {
+  font-size: 16px;
+  line-height: 1.8rem;
+}
+
+.couple-section .btn-sosmed {
+  margin-top: 30px;
+}
+
+.couple-section .link-sosmed {
+  display: inline-flex;
+  background-color: #e0c99d;
+  padding: 8px 10px 8px 10px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.couple-section .link-sosmed:hover,
+.couple-section .link-sosmed:focus {
+  background-color: #f5dfb5;
+  padding: 10px 12px 10px 12px;
+}
+
+.couple-section .svg-inline--fa {
+  height: 26px !important;
+}
+
+.brown-fullbg {
+  height: 100vh;
+  background: url('/img/brown-love.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+.event-section .head-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #414141;
+}
+
+.event-section .head-text {
+  font-size: 16px;
+  line-height: 1.8rem;
+  color: #414141;
+}
+
+.event-card {
+  border-color: #a6a8a2 !important;
+  border-radius: 18px !important;
+  background-image: linear-gradient(#a19b9d, #676163);
+  padding: 20px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.ico-ring {
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
+.event-card .title {
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.event-card .text {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.event-card .text-small {
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.countdown-card {
+  border-radius: 18px !important;
+  background-image: linear-gradient(#fff, #f0f0f0);
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.countdown-card .img-card {
+  height: 100%;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.countdown-card .title {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  color: #414141;
+}
+
+.countdown-card .text {
+  font-size: 12px;
+  display: block;
+  color: #414141;
+}
+
+.countdown-timer .timer-wrap {
+  padding: 8px 16px;
+  margin: 0 40px;
+}
+
+.countdown-timer p {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.countdown-timer .count {
+  font-size: 20px;
+  font-weight: bold;
+  color: #414141;
+}
+
+.countdown-timer .count-name {
+  font-size: 11px;
+  color: #414141;
+}
+
+.count-name.done {
+  font-style: italic;
+}
+
+.countdown-timer img {
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+}
