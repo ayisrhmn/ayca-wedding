@@ -1,13 +1,12 @@
-# Aycashop Admin (Backend & API)
-Repo frontend
-<a href="https://github.com/ayisrhmn/aycashop">
-  Aycashop (Frontend)
-</a>
+# Ayca Wedding Invitation
+Still on Progress . . .
 
 ---
 
-## Build Backend or API with Stack
+## Build with Stack
 
+- React.js (Next.js)
+- React Bootstrap
 - Node.js (Express.js)
-- MongoDB (Database)
+- MongoDB
 
