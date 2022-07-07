@@ -1,18 +1,13 @@
-# ayca-wedding
-<!-- Repo backend
-<a href="https://github.com/ayisrhmn/aycashop-admin">
-  Aycashop Admin (Backend & API)
+# Aycashop Admin (Backend & API)
+Repo frontend
+<a href="https://github.com/ayisrhmn/aycashop">
+  Aycashop (Frontend)
 </a>
 
 ---
 
-## Build Frontend with Stack
+## Build Backend or API with Stack
 
-- React.js (Typescript)
-- Next.js
+- Node.js (Express.js)
+- MongoDB (Database)
 
-## Link Demo Project
-
-<a href="https://aycashop-id.vercel.app/">
-  <p>Aycashop - Paradise for Women</p>
-</a> -->

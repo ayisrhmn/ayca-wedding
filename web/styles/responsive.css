@@ -1,0 +1,90 @@
+/* phone */
+@media (min-width: 280px) and (max-width: 480px) {
+  .welcome-content {
+    bottom: 10rem;
+  }
+
+  .prayer-card {
+    padding: 70px 0;
+  }
+
+  .prayer-card .text {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  .couple-section .couple-img {
+    height: 20rem;
+  }
+
+  .brown-fullbg {
+    height: 18rem;
+  }
+
+  .event-section .head-title {
+    font-size: 18px;
+  }
+
+  .event-section .head-text {
+    font-size: 14px;
+  }
+
+  .countdown-timer .timer-wrap {
+    padding: 8px 8px;
+    margin: 0 8px;
+  }
+}
+
+/* tablet or phone with big screen */
+@media (min-width: 481px) and (max-width: 767px) {
+  .welcome-content {
+    bottom: 10rem;
+  }
+
+  .prayer-card {
+    padding: 70px 0;
+  }
+
+  .prayer-card .text {
+    line-height: 1.8rem;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  .couple-section .couple-img {
+    height: 20rem;
+  }
+
+  .brown-fullbg {
+    height: 18rem;
+  }
+
+  .event-section .head-title {
+    font-size: 18px;
+  }
+
+  .event-section .head-text {
+    font-size: 14px;
+  }
+
+  .countdown-timer .timer-wrap {
+    padding: 8px 8px;
+    margin: 0 8px;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .couple-section .couple-img {
+    height: 16rem;
+  }
+
+  .brown-fullbg {
+    height: 30rem;
+  }
+  
+  .countdown-timer .timer-wrap {
+    padding: 8px 10px;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ayca-wedding",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "aos": "^2.3.4",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "classnames": "^2.3.1",
+    "moment": "^2.29.3",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-bootstrap": "^2.4.0",
+    "react-countdown": "^2.3.2",
+    "react-dom": "17.0.2",
+    "react-toastify": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@types/aos": "^3.0.4",
+    "@types/node": "17.0.5",
+    "@types/react": "17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.5.0",
+    "eslint-config-next": "12.0.7",
+    "typescript": "4.5.4"
+  }
+}

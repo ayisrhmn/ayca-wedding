@@ -1,0 +1,28 @@
+.select2-container .select2-selection--single {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  top: 74%;
+}
+
+.main-sidebar {
+  background-color: #33BFA0 !important;
+}
+
+.nav-sidebar .nav-link p {
+  color: #fff !important;
+}
+
+.nav-sidebar>.nav-item .nav-icon {
+  color: #fff !important;
+}
+
+.nav-sidebar .nav-header {
+  color: #ffffff9e !important;
+}
