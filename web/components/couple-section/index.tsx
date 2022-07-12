@@ -51,7 +51,7 @@ const CoupleSection = (props: CoupleSectionProps) => {
                 <div className="btn-sosmed d-flex justify-content-center">
                   <a href={item.ig_url} target="_blank">
                     <div className="link-sosmed">
-                      <FontAwesomeIcon icon={faInstagram} color={'#8a8486'} />
+                      <FontAwesomeIcon icon={faInstagram} color={'#414141'} />
                     </div>
                   </a>
                 </div>

@@ -167,6 +167,9 @@ body {
   padding: 8px 10px 8px 10px;
   border-radius: 50%;
   transition: 0.2s;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
 }
 
 .couple-section .link-sosmed:hover,
@@ -325,4 +328,24 @@ body {
   color: #fff;
   line-height: 1.6rem;
   text-align: justify;
+}
+
+.toggle-music {
+  display: inline-flex;
+  background-color: #e0c99d;
+  padding: 12px 14px 12px 14px;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.toggle-music:hover,
+.toggle-music:focus {
+  background-color: #f5dfb5;
 }
