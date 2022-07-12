@@ -55,8 +55,8 @@ const CountdownSection = (props: CountdownSectionProps) => {
 
   return (
     <section className="countdown-section py-4">
-      <Container className="my-5">
-        <Row className="justify-content-center mb-4">
+      <Container className="my-3">
+        <Row className="justify-content-center mb-3">
           <Col md={10}>
             <Card
               className="countdown-card my-3"
@@ -70,7 +70,7 @@ const CountdownSection = (props: CountdownSectionProps) => {
               <Card.Body
                 data-aos="fade"
                 data-aos-duration="2000"
-                className="px-2">
+                className="px-4">
                 <Card.Title className="title text-center mt-2 mb-4">
                   To a Happy Day!
                 </Card.Title>
