@@ -23,7 +23,9 @@ const Home = () => {
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
     setGuestName(to !== undefined ? `${to}` : '');
     setPlaceName(place !== undefined ? `${place}` : '');
     setSessionNum(session !== undefined ? `${session}` : '');
