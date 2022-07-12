@@ -27,7 +27,7 @@ const CoupleSection = (props: CoupleSectionProps) => {
           className="title text-center mt-5 mb-3"
           data-aos="fade"
           data-aos-duration="1000">
-          Sang Mempelai
+          {props.place === 'kdr' ? 'The Groom & Bride' : 'The Bride & Groom'}
         </h3>
         <Row>
           {filteredData(props.data, props.place).map((item: any, i: number) => (
