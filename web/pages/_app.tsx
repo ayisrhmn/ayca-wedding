@@ -8,22 +8,19 @@ import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
 import 'moment/locale/id';
 
+moment.locale('id');
+
 function MyApp({Component, pageProps}: AppProps) {
-  moment.locale('id');
   return (
     <>
       <Head>
-        <title>Rika & Fariz - Wedding Invitation</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Rika & Fariz Wedding Invitation" />
 
-        {/* AOS Animation */}
-        <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
-        />
+        <title>The Wedding - Rika & Fariz</title>
+        <meta property="og:title" content="The Wedding - Rika & Fariz" />
       </Head>
+      <Component {...pageProps} />
       <script
         src="https://unpkg.com/react/umd/react.production.min.js"
         crossOrigin="true"></script>
@@ -34,7 +31,6 @@ function MyApp({Component, pageProps}: AppProps) {
         src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
         crossOrigin="true"></script>
       <script>var Alert = ReactBootstrap.Alert;</script>
-      <Component {...pageProps} />
       <ToastContainer />
     </>
   );

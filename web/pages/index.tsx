@@ -1,5 +1,6 @@
 import React from 'react';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 import FrontCover from '../components/front-cover';
 import {useRouter} from 'next/router';
 import WelcomeSection from '../components/welcome-section';
@@ -26,7 +27,6 @@ const Home = () => {
     setPlaceName(place !== undefined ? `${place}` : '');
     setSessionNum(session !== undefined ? `${session}` : '');
     isMobileScreen();
-    // redirectAlwaysWithPlace(placeName);
 
     return () => {};
   }, [place, session, to]);
@@ -80,14 +80,6 @@ const Home = () => {
     endSesi2: moment('2022-11-26 15:00'),
     location: 'https://maps.app.goo.gl/1jsuAhE9zRceu7CdA',
   };
-
-  // const redirectAlwaysWithPlace = (place: any) => {
-  //   if (place.length > 0) {
-  //     if (place !== 'tlg' || place !== 'kdr') {
-  //       router.push('/404');
-  //     }
-  //   }
-  // };
 
   return (
     <>
