@@ -10,6 +10,7 @@ import BrownSection from '../components/brown-section';
 import EventSection from '../components/event-section';
 import CountdownSection from '../components/countdown-section';
 import moment from 'moment';
+import OurStorySection from '../components/our-story-section';
 
 const Home = () => {
   const router = useRouter();
@@ -113,6 +114,7 @@ const Home = () => {
             eventKdr={eventKdr}
             place={placeName}
           />
+          <OurStorySection isMobile={isMobile} />
         </>
       )}
     </>

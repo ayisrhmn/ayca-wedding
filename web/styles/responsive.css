@@ -33,6 +33,11 @@
     padding: 8px 8px;
     margin: 0 8px;
   }
+
+  .story-section .img-holder {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* tablet or phone with big screen */
@@ -71,6 +76,11 @@
     padding: 8px 8px;
     margin: 0 8px;
   }
+
+  .story-section .img-holder {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* tablet */
@@ -82,9 +92,14 @@
   .brown-fullbg {
     height: 30rem;
   }
-  
+
   .countdown-timer .timer-wrap {
     padding: 8px 10px;
     margin: 0 10px;
+  }
+
+  .story-section .img-holder {
+    width: 100%;
+    height: auto;
   }
 }
