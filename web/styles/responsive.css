@@ -38,6 +38,10 @@
     width: 100%;
     height: auto;
   }
+
+  .prayer-section .text {
+    font-size: 14px;
+  }
 }
 
 /* tablet or phone with big screen */
@@ -80,6 +84,10 @@
   .story-section .img-holder {
     width: 100%;
     height: auto;
+  }
+
+  .prayer-section .text {
+    font-size: 14px;
   }
 }
 
