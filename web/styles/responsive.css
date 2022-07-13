@@ -180,6 +180,14 @@
     margin-top: 6px;
   }
 
+  .gallery-title h3 {
+    text-align: center;
+  }
+
+  .gallery-title p {
+    text-align: center;
+  }
+
   .couple-section .title,
   .story-section .title,
   .gallery-title h3 {
