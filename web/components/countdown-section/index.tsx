@@ -2,13 +2,14 @@ import React from 'react';
 import {Col, Container, Row, Card} from 'react-bootstrap';
 import Countdown from 'react-countdown';
 
-interface CountdownSectionProps {
+interface CountdownProps {
   eventTlg: any;
   eventKdr: any;
   place: string;
+  isMobile: boolean;
 }
 
-const CountdownSection = (props: CountdownSectionProps) => {
+const CountdownSection = (props: CountdownProps) => {
   const Completionist = () => {
     return (
       <Row className="countdown-timer mt-5 mb-3">
@@ -57,38 +58,43 @@ const CountdownSection = (props: CountdownSectionProps) => {
     <section className="countdown-section py-4">
       <Container className="my-3">
         <Row className="justify-content-center mb-3">
-          <Col md={10}>
+          <Col md={12}>
             <Card
               className="countdown-card my-3"
               data-aos="fade-up"
               data-aos-duration="1000">
-              <Card.Img
-                variant="top"
-                src="/img/countdown-love.jpg"
-                className="img-card"
-              />
-              <Card.Body
-                data-aos="fade"
-                data-aos-duration="2000"
-                className="px-4">
-                <Card.Title className="title text-center mt-2 mb-4">
-                  To a Happy Day!
-                </Card.Title>
-                <Card.Text className="text text-center mb-4">
-                  Hari demi hari berganti begitu cepat, di antara saat-saat
-                  mendebarkan yang belum pernah kami rasakan sebelumnya.
-                  <br />
-                  Kami nantikan kehadiran para keluarga dan sahabat, untuk
-                  menjadi saksi ikrar janji suci kami di hari yang bahagia.
-                </Card.Text>
-                <Countdown
-                  date={
-                    props.place === 'kdr'
-                      ? props.eventKdr.startSesi1
-                      : props.eventTlg.akad
-                  }
-                  renderer={renderer}
-                />
+              <Card.Body className="px-0 py-0">
+                <Row className="align-items-center">
+                  <Col md={4}>
+                    <img src="/img/countdown-love.jpg" className="img-card" />
+                  </Col>
+                  <Col md={8}>
+                    <div
+                      className="py-3 px-3"
+                      data-aos="fade"
+                      data-aos-duration="2000">
+                      <img src="/img/doves.png" className="ico-doves" />
+                      <Card.Title className="title text-center mt-2 mb-4">
+                        To a Happy Day!
+                      </Card.Title>
+                      <Card.Text className="text text-center mb-4">
+                        Hari demi hari berganti begitu cepat, di antara
+                        saat-saat mendebarkan yang belum pernah kami rasakan
+                        sebelumnya. Kami nantikan kehadiran para keluarga dan
+                        sahabat, untuk menjadi saksi ikrar janji suci kami di
+                        hari yang bahagia.
+                      </Card.Text>
+                      <Countdown
+                        date={
+                          props.place === 'kdr'
+                            ? props.eventKdr.startSesi1
+                            : props.eventTlg.akad
+                        }
+                        renderer={renderer}
+                      />
+                    </div>
+                  </Col>
+                </Row>
               </Card.Body>
             </Card>
           </Col>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Container, Row, Card, Button} from 'react-bootstrap';
 
-interface EventSectionProps {
+interface EventProps {
   eventTlg: any;
   eventKdr: any;
   isMobile: boolean;
@@ -9,7 +9,7 @@ interface EventSectionProps {
   session: string;
 }
 
-const EventSection = (props: EventSectionProps) => {
+const EventSection = (props: EventProps) => {
   const cardEvent = (place: any) => {
     if (place === 'kdr') {
       return (

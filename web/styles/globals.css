@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import '~react-image-gallery/styles/css/image-gallery.css';
 
 html,
 body {
@@ -90,7 +91,8 @@ body {
 }
 
 .prayer-section,
-.countdown-section {
+.countdown-section,
+.gallery-section {
   background-image: linear-gradient(#d2ccce, #a19b9d);
 }
 
@@ -130,7 +132,8 @@ body {
 }
 
 .couple-section .title,
-.story-section .title {
+.story-section .title,
+.gallery-title h3 {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
@@ -257,9 +260,11 @@ body {
 }
 
 .countdown-card .img-card {
-  height: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
   border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
 }
 
 .countdown-card .title {
@@ -292,8 +297,15 @@ body {
 }
 
 .countdown-timer .count-name {
-  font-size: 11px;
+  font-size: 12px;
   color: #414141;
+}
+
+.ico-doves {
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 35px;
 }
 
 .count-name.done {
@@ -348,4 +360,43 @@ body {
 .toggle-music:hover,
 .toggle-music:focus {
   background-color: #f5dfb5;
+}
+
+.gallery-title h3 {
+  color: #414141 !important;
+}
+
+.gallery-title p {
+  font-size: 18px;
+  color: #414141;
+}
+
+.image-gallery-image {
+  object-fit: cover !important;
+  border-radius: 10px;
+}
+
+.image-gallery-slide,
+.image-gallery-slides,
+.image-gallery-thumbnail-image {
+  border-radius: 10px;
+}
+
+.image-gallery-thumbnail,
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus,
+.image-gallery-thumbnail:hover {
+  border-radius: 13px;
+}
+
+.image-gallery-slides {
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.image-gallery-thumbnail-image {
+  box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 30%);
 }

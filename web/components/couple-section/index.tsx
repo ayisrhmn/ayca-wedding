@@ -3,13 +3,13 @@ import {Col, Container, Row} from 'react-bootstrap';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-interface CoupleSectionProps {
+interface CoupleProps {
   data: any;
   place: string;
   isMobile: boolean;
 }
 
-const CoupleSection = (props: CoupleSectionProps) => {
+const CoupleSection = (props: CoupleProps) => {
   const filteredData = (data: any, place: string) => {
     return data.sort((a: any, b: any) => {
       if (place === 'kdr') {

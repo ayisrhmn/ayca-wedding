@@ -2,11 +2,11 @@ import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import moment from 'moment';
 
-interface WelcomeSectionProps {
+interface WelcomeProps {
   place: string;
 }
 
-const WelcomeSection = (props: WelcomeSectionProps) => {
+const WelcomeSection = (props: WelcomeProps) => {
   return (
     <section
       className="welcome-fullbg"
