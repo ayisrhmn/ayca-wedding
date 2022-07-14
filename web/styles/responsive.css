@@ -29,9 +29,90 @@
     font-size: 14px;
   }
 
+  .countdown-card .img-card {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 0;
+  }
+
   .countdown-timer .timer-wrap {
-    padding: 8px 8px;
-    margin: 0 8px;
+    padding: 6px 6px;
+    margin: 0 6px;
+  }
+
+  .countdown-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    color: #414141;
+  }
+
+  .countdown-card .text {
+    font-size: 12px;
+    display: block;
+    color: #414141;
+  }
+
+  .countdown-timer .count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #414141;
+  }
+
+  .countdown-timer .count-name {
+    font-size: 10px;
+    color: #414141;
+  }
+
+  .story-section .img-holder {
+    width: 100%;
+    height: auto;
+  }
+
+  .prayer-section .text {
+    font-size: 14px;
+  }
+
+  .ico-doves {
+    height: 60px;
+    margin-bottom: 16px;
+    margin-top: 6px;
+  }
+
+  .gallery-title h3 {
+    text-align: center;
+  }
+
+  .gallery-title p {
+    text-align: center;
+  }
+
+  .couple-section .title,
+  .story-section .title,
+  .gallery-title h3,
+  .greetings-section .title {
+    font-size: 32px;
+  }
+
+  .gallery-title p {
+    font-size: 16px;
+  }
+
+  .confirm-card .title {
+    font-size: 18px;
+  }
+
+  .btn-wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .btn-wrapper .btn-confirm.accept {
+    margin-bottom: 14px;
+  }
+
+  .btn-wrapper .btn-confirm {
+    width: 86%;
   }
 }
 
@@ -67,9 +148,90 @@
     font-size: 14px;
   }
 
+  .countdown-card .img-card {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 0;
+  }
+
   .countdown-timer .timer-wrap {
-    padding: 8px 8px;
-    margin: 0 8px;
+    padding: 6px 6px;
+    margin: 0 6px;
+  }
+
+  .countdown-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    color: #414141;
+  }
+
+  .countdown-card .text {
+    font-size: 12px;
+    display: block;
+    color: #414141;
+  }
+
+  .countdown-timer .count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #414141;
+  }
+
+  .countdown-timer .count-name {
+    font-size: 10px;
+    color: #414141;
+  }
+
+  .story-section .img-holder {
+    width: 100%;
+    height: auto;
+  }
+
+  .prayer-section .text {
+    font-size: 14px;
+  }
+
+  .ico-doves {
+    height: 60px;
+    margin-bottom: 16px;
+    margin-top: 6px;
+  }
+
+  .gallery-title h3 {
+    text-align: center;
+  }
+
+  .gallery-title p {
+    text-align: center;
+  }
+
+  .couple-section .title,
+  .story-section .title,
+  .gallery-title h3,
+  .greetings-section .title {
+    font-size: 32px;
+  }
+
+  .gallery-title p {
+    font-size: 16px;
+  }
+
+  .confirm-card .title {
+    font-size: 18px;
+  }
+
+  .btn-wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .btn-wrapper .btn-confirm.accept {
+    margin-bottom: 14px;
+  }
+
+  .btn-wrapper .btn-confirm {
+    width: 86%;
   }
 }
 
@@ -82,9 +244,14 @@
   .brown-fullbg {
     height: 30rem;
   }
-  
+
   .countdown-timer .timer-wrap {
     padding: 8px 10px;
     margin: 0 10px;
+  }
+
+  .story-section .img-holder {
+    width: 100%;
+    height: auto;
   }
 }

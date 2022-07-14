@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Container, Row, Card, Button} from 'react-bootstrap';
 
-interface EventSectionProps {
+interface EventProps {
   eventTlg: any;
   eventKdr: any;
   isMobile: boolean;
@@ -9,7 +9,9 @@ interface EventSectionProps {
   session: string;
 }
 
-const EventSection = (props: EventSectionProps) => {
+const EventSection = (props: EventProps) => {
+  const valSession = parseInt(props.session);
+
   const cardEvent = (place: any) => {
     if (place === 'kdr') {
       return (
@@ -25,7 +27,7 @@ const EventSection = (props: EventSectionProps) => {
                 <Card.Text className="text mb-3">
                   {props.eventKdr.startSesi1.format('dddd, DD MMMM YYYY')}
                 </Card.Text>
-                {parseInt(props.session) === 1 ? (
+                {valSession === 2 ? (
                   <>
                     <Card.Text className="text-small">
                       {props.eventKdr.startSesi2.format('HH:mm')} WIB -{' '}
@@ -147,14 +149,11 @@ const EventSection = (props: EventSectionProps) => {
   };
 
   return (
-    <section className="event-section py-4" style={{overflow: 'hidden'}}>
-      <Container>
-        <Row className="justify-content-center mb-5">
+    <section className="event-section py-5" style={{overflow: 'hidden'}}>
+      <Container className="my-3">
+        <Row className="justify-content-center">
           <Col md={12}>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="mt-5 mb-4">
+            <div data-aos="fade-up" data-aos-duration="1000" className="mb-4">
               <h3 className="head-title text-center">
                 السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
               </h3>
@@ -162,9 +161,9 @@ const EventSection = (props: EventSectionProps) => {
                 Assalamu’alaikum Warahmatullahi Wabarakatuh
               </h3>
             </div>
-            <div data-aos="fade-up" data-aos-duration="2000">
+            <div data-aos="fade-up" data-aos-duration="1000">
               {!props.isMobile ? (
-                <p className="head-text text-center mb-5">
+                <p className="head-text text-center mb-4">
                   Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan
                   segenap kerendahan hati,
                   <br />
@@ -174,7 +173,7 @@ const EventSection = (props: EventSectionProps) => {
                   yang akan dilaksanakan pada:
                 </p>
               ) : (
-                <p className="head-text text-center">
+                <p className="head-text text-center mb-4">
                   Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan
                   segenap kerendahan hati, perkenankanlah kami mengundang
                   Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang

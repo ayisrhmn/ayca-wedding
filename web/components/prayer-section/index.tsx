@@ -3,12 +3,12 @@ import {Col, Container, Row, Card} from 'react-bootstrap';
 
 const PrayerSection = () => {
   return (
-    <section className="prayer-section py-4">
-      <Container>
+    <section className="prayer-section py-5">
+      <Container className="my-3">
         <Row>
           <Col md={12}>
             <Card
-              className="prayer-card my-4"
+              className="prayer-card"
               data-aos="fade-up"
               data-aos-duration="1000">
               <Card.Body data-aos="fade" data-aos-duration="2000">

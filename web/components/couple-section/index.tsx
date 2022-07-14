@@ -3,13 +3,13 @@ import {Col, Container, Row} from 'react-bootstrap';
 import {faInstagram} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-interface CoupleSectionProps {
+interface CoupleProps {
   data: any;
   place: string;
   isMobile: boolean;
 }
 
-const CoupleSection = (props: CoupleSectionProps) => {
+const CoupleSection = (props: CoupleProps) => {
   const filteredData = (data: any, place: string) => {
     return data.sort((a: any, b: any) => {
       if (place === 'kdr') {
@@ -21,17 +21,17 @@ const CoupleSection = (props: CoupleSectionProps) => {
   };
 
   return (
-    <section className="couple-section py-4" style={{overflow: 'hidden'}}>
-      <Container className="my-4">
+    <section className="couple-section py-5" style={{overflow: 'hidden'}}>
+      <Container className="my-3">
         <h3
-          className="title text-center mt-5 mb-3"
-          data-aos="fade"
+          className="title text-center mb-4"
+          data-aos="fade-up"
           data-aos-duration="1000">
-          Sang Mempelai
+          {props.place === 'kdr' ? 'The Groom & Bride' : 'The Bride & Groom'}
         </h3>
         <Row>
           {filteredData(props.data, props.place).map((item: any, i: number) => (
-            <Col md={6} className="mb-5" key={i}>
+            <Col md={6} className="mb-4" key={i}>
               <img
                 src={props.place === 'kdr' ? item.img_kdr : item.img_tlg}
                 className="couple-img mt-5 mb-4"
@@ -51,7 +51,7 @@ const CoupleSection = (props: CoupleSectionProps) => {
                 <div className="btn-sosmed d-flex justify-content-center">
                   <a href={item.ig_url} target="_blank">
                     <div className="link-sosmed">
-                      <FontAwesomeIcon icon={faInstagram} color={'#8a8486'} />
+                      <FontAwesomeIcon icon={faInstagram} color={'#414141'} />
                     </div>
                   </a>
                 </div>
