@@ -10,14 +10,14 @@ interface FooterProps {
 
 const FooterSection = (props: FooterProps) => {
   return (
-    <footer className="footer-section pt-5">
+    <footer
+      className="footer-section pt-5"
+      data-aos="fade-up"
+      data-aos-duration="1000">
       <Container>
         <Row className="my-3">
           <Col md={12}>
-            <div
-              className="footer-content"
-              data-aos="fade-up"
-              data-aos-duration="1000">
+            <div className="footer-content">
               <h4 className="mb-2 text-center text-white wd-couplename font-weight-bold">
                 {props.place === 'kdr' ? 'Fariz' : 'Rika'} &{' '}
                 {props.place === 'kdr' ? 'Rika' : 'Fariz'}
