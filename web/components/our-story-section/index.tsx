@@ -11,7 +11,7 @@ const OurStorySection = (props: OurStoryProps) => {
     <section className="story-section py-5" style={{overflow: 'hidden'}}>
       <Container className="my-3">
         <h3
-          className="title text-center mb-5"
+          className="title text-center mb-4"
           data-aos="fade-up"
           data-aos-duration="1000">
           Our Story

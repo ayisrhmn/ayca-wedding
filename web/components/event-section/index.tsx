@@ -163,7 +163,7 @@ const EventSection = (props: EventProps) => {
             </div>
             <div data-aos="fade-up" data-aos-duration="1000">
               {!props.isMobile ? (
-                <p className="head-text text-center mb-5">
+                <p className="head-text text-center mb-4">
                   Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan
                   segenap kerendahan hati,
                   <br />
@@ -173,7 +173,7 @@ const EventSection = (props: EventProps) => {
                   yang akan dilaksanakan pada:
                 </p>
               ) : (
-                <p className="head-text text-center">
+                <p className="head-text text-center mb-4">
                   Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan
                   segenap kerendahan hati, perkenankanlah kami mengundang
                   Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang

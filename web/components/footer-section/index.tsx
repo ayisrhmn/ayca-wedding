@@ -10,10 +10,7 @@ interface FooterProps {
 
 const FooterSection = (props: FooterProps) => {
   return (
-    <footer
-      className="footer-section pt-5"
-      data-aos="fade-up"
-      data-aos-duration="1000">
+    <footer className="footer-section pt-5">
       <Container>
         <Row className="my-3">
           <Col md={12}>

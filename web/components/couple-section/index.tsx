@@ -24,7 +24,7 @@ const CoupleSection = (props: CoupleProps) => {
     <section className="couple-section py-5" style={{overflow: 'hidden'}}>
       <Container className="my-3">
         <h3
-          className="title text-center mb-5"
+          className="title text-center mb-4"
           data-aos="fade-up"
           data-aos-duration="1000">
           {props.place === 'kdr' ? 'The Groom & Bride' : 'The Bride & Groom'}
