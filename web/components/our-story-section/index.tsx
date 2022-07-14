@@ -12,7 +12,7 @@ const OurStorySection = (props: OurStoryProps) => {
       <Container className="my-3">
         <h3
           className="title text-center mb-5"
-          data-aos="fade"
+          data-aos="fade-up"
           data-aos-duration="1000">
           Our Story
         </h3>

@@ -6,7 +6,7 @@ const GreetingsSection = () => {
   return (
     <section className="greetings-section py-5">
       <Container className="my-3">
-        <h3 className="title mb-5" data-aos="fade" data-aos-duration="1000">
+        <h3 className="title mb-5" data-aos="fade-up" data-aos-duration="1000">
           Best Wishes &#10084;
         </h3>
         <Row className="justify-content-center mt-5">
@@ -38,7 +38,10 @@ const GreetingsSection = () => {
               </Button>
             </Form>
             <br />
-            <div className="list-greetings mb-5" data-aos="fade-up" data-aos-duration="2000">
+            <div
+              className="list-greetings mb-5"
+              data-aos="fade-up"
+              data-aos-duration="2000">
               {[...Array(4)]?.map((_, i: number) => (
                 <>
                   <div className="d-flex mb-4" key={i}>

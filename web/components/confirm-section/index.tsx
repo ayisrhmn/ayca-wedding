@@ -24,7 +24,10 @@ const ConfirmSection = () => {
               className="confirm-card d-flex align-items-center"
               data-aos="fade-up"
               data-aos-duration="1000">
-              <Card.Body className="my-4" data-aos="fade" data-aos-duration="2000">
+              <Card.Body
+                className="my-4"
+                data-aos="fade"
+                data-aos-duration="2000">
                 {!isConfirm ? (
                   <>
                     <Card.Title className="title text-center mb-3 pb-3">
