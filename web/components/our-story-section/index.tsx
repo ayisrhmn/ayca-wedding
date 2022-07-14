@@ -8,10 +8,10 @@ interface OurStoryProps {
 
 const OurStorySection = (props: OurStoryProps) => {
   return (
-    <section className="story-section py-4" style={{overflow: 'hidden'}}>
-      <Container className="my-4">
+    <section className="story-section py-5" style={{overflow: 'hidden'}}>
+      <Container className="my-3">
         <h3
-          className="title text-center mt-5 mb-5"
+          className="title text-center mb-5"
           data-aos="fade"
           data-aos-duration="1000">
           Our Story

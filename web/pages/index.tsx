@@ -20,6 +20,9 @@ import {
   storyData,
   imgGallery,
 } from '../config/data';
+import ConfirmSection from '../components/confirm-section';
+import GreetingsSection from '../components/greetings-section';
+import FooterSection from '../components/footer-section';
 
 const Home = () => {
   const router = useRouter();
@@ -102,6 +105,9 @@ const Home = () => {
           />
           <OurStorySection storyData={storyData} isMobile={isMobile} />
           <GallerySection imgGallery={imgGallery} />
+          <ConfirmSection />
+          <GreetingsSection />
+          <FooterSection place={placeName} />
           <FloatingToggleMusic toggle={toggle} playing={playing} />
         </>
       )}

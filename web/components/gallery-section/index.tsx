@@ -8,7 +8,7 @@ interface GalleryProps {
 
 const GallerySection = (props: GalleryProps) => {
   return (
-    <section className="gallery-section py-4" style={{overflow: 'hidden'}}>
+    <section className="gallery-section py-5" style={{overflow: 'hidden'}}>
       <Container className="my-3">
         <Row className="align-items-center">
           <Col md={6}>

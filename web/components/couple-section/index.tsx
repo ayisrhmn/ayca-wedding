@@ -21,17 +21,17 @@ const CoupleSection = (props: CoupleProps) => {
   };
 
   return (
-    <section className="couple-section py-4" style={{overflow: 'hidden'}}>
-      <Container className="my-4">
+    <section className="couple-section py-5" style={{overflow: 'hidden'}}>
+      <Container className="my-3">
         <h3
-          className="title text-center mt-5 mb-3"
-          data-aos="fade"
+          className="title text-center mb-5"
+          data-aos="fade-up"
           data-aos-duration="1000">
           {props.place === 'kdr' ? 'The Groom & Bride' : 'The Bride & Groom'}
         </h3>
         <Row>
           {filteredData(props.data, props.place).map((item: any, i: number) => (
-            <Col md={6} className="mb-5" key={i}>
+            <Col md={6} className="mb-4" key={i}>
               <img
                 src={props.place === 'kdr' ? item.img_kdr : item.img_tlg}
                 className="couple-img mt-5 mb-4"

@@ -10,6 +10,8 @@ interface EventProps {
 }
 
 const EventSection = (props: EventProps) => {
+  const valSession = parseInt(props.session);
+
   const cardEvent = (place: any) => {
     if (place === 'kdr') {
       return (
@@ -25,7 +27,7 @@ const EventSection = (props: EventProps) => {
                 <Card.Text className="text mb-3">
                   {props.eventKdr.startSesi1.format('dddd, DD MMMM YYYY')}
                 </Card.Text>
-                {parseInt(props.session) === 1 ? (
+                {valSession === 2 ? (
                   <>
                     <Card.Text className="text-small">
                       {props.eventKdr.startSesi2.format('HH:mm')} WIB -{' '}
@@ -147,11 +149,11 @@ const EventSection = (props: EventProps) => {
   };
 
   return (
-    <section className="event-section py-4" style={{overflow: 'hidden'}}>
-      <Container>
-        <Row className="justify-content-center mb-5">
+    <section className="event-section py-5" style={{overflow: 'hidden'}}>
+      <Container className="my-3">
+        <Row className="justify-content-center">
           <Col md={12}>
-            <div data-aos="fade" data-aos-duration="1000" className="mt-5 mb-4">
+            <div data-aos="fade-up" data-aos-duration="1000" className="mb-4">
               <h3 className="head-title text-center">
                 السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
               </h3>
@@ -159,7 +161,7 @@ const EventSection = (props: EventProps) => {
                 Assalamu’alaikum Warahmatullahi Wabarakatuh
               </h3>
             </div>
-            <div data-aos="fade" data-aos-duration="1000">
+            <div data-aos="fade-up" data-aos-duration="1000">
               {!props.isMobile ? (
                 <p className="head-text text-center mb-5">
                   Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan

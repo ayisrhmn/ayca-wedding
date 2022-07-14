@@ -55,9 +55,9 @@ const CountdownSection = (props: CountdownProps) => {
   };
 
   return (
-    <section className="countdown-section py-4">
+    <section className="countdown-section py-5">
       <Container className="my-3">
-        <Row className="justify-content-center mb-3">
+        <Row className="justify-content-center">
           <Col md={12}>
             <Card
               className="countdown-card my-3"
