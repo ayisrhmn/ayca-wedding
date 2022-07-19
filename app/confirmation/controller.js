@@ -4,7 +4,7 @@ module.exports = {
   confirmList: async (_, res) => {
     try {
       const Data = await Confirmation.find().select(
-        'Name Confirmation createdAt updatedAt',
+        'Name Place Confirmation createdAt updatedAt',
       );
 
       res.status(200).json({
@@ -41,17 +41,30 @@ module.exports = {
   },
   countConfirmation: async (_, res) => {
     try {
-      let count_hadir = await Confirmation.countDocuments({
-        Confirmation: 'Hadir',
-      });
+      let count_confirm_tlg = {
+        Hadir: await Confirmation.find({Place: 'tlg'}).countDocuments({
+          Confirmation: 'Hadir',
+        }),
+        TidakHadir: await Confirmation.find({Place: 'tlg'}).countDocuments({
+          Confirmation: 'Tidak Hadir',
+        }),
+        Total: await Confirmation.find({Place: 'tlg'}).countDocuments(),
+      };
 
-      let count_tidak_hadir = await Confirmation.countDocuments({
-        Confirmation: 'Tidak Hadir',
-      });
+      let count_confirm_kdr = {
+        Hadir: await Confirmation.find({Place: 'kdr'}).countDocuments({
+          Confirmation: 'Hadir',
+        }),
+        TidakHadir: await Confirmation.find({Place: 'kdr'}).countDocuments({
+          Confirmation: 'Tidak Hadir',
+        }),
+        Total: await Confirmation.find({Place: 'kdr'}).countDocuments(),
+      };
 
       const payload = {
-        Hadir: count_hadir,
-        TidakHadir: count_tidak_hadir,
+        Tulungagung: count_confirm_tlg,
+        Kediri: count_confirm_kdr,
+        Total_All: await Confirmation.find().countDocuments(),
       };
 
       res.status(200).json({
@@ -67,7 +80,7 @@ module.exports = {
     try {
       const {Name} = req.body;
       const Data = await Confirmation.findOne({Name}).select(
-        'Name Confirmation',
+        'Name Place Confirmation',
       );
 
       res.status(200).json({

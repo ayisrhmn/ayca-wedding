@@ -76,9 +76,12 @@ const GreetingsSection = () => {
         <h3 className="title mb-5" data-aos="fade-up" data-aos-duration="1000">
           Best Wishes &#10084;
         </h3>
-        <Row className="justify-content-center mt-5">
+        <Row
+          className="justify-content-center mt-5"
+          data-aos="fade-up"
+          data-aos-duration="2000">
           <Col md={8}>
-            <div className="mb-5" data-aos="fade-up" data-aos-duration="2000">
+            <div className="mb-5">
               <Form.Group className="mb-3" controlId="formName">
                 <Form.Label className="isform-label">Nama Kamu</Form.Label>
                 <Form.Control
@@ -116,8 +119,6 @@ const GreetingsSection = () => {
             {loading && <Digital color={'#414141'} />}
             <div
               className="list-greetings"
-              data-aos="fade-up"
-              data-aos-duration="2000"
               style={{marginBottom: greetingList.length !== 0 ? '3rem' : 0}}>
               {greetingList?.map((item: any, i: number) => (
                 <div className="d-flex mb-4" key={i}>

@@ -5,6 +5,7 @@ import {createConfirmation, getConfirmByName} from '../../config/services';
 
 interface ConfirmProps {
   guestName: string;
+  place: string;
 }
 
 const ConfirmSection = (props: ConfirmProps) => {
@@ -12,10 +13,12 @@ const ConfirmSection = (props: ConfirmProps) => {
   const [dtConfirmByName, setDtConfirmByName] = React.useState({
     _id: '',
     Name: '',
+    Place: '',
     Confirmation: '',
   });
 
   const Name = props.guestName;
+  const Place = props.place;
 
   React.useEffect(() => {
     initData();
@@ -44,6 +47,7 @@ const ConfirmSection = (props: ConfirmProps) => {
 
     let payload = {
       Name,
+      Place,
       Confirmation: val,
     };
 

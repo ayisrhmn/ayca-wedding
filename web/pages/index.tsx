@@ -107,7 +107,9 @@ const Home = () => {
           />
           <OurStorySection storyData={storyData} isMobile={isMobile} />
           <GallerySection imgGallery={imgGallery} />
-          {guestName !== '' && <ConfirmSection guestName={guestName} />}
+          {guestName !== '' && (
+            <ConfirmSection guestName={guestName} place={placeName} />
+          )}
           <GreetingsSection />
           <FooterSection place={placeName} />
           <FloatingToggleMusic toggle={toggle} playing={playing} />
