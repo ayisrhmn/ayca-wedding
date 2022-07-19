@@ -48,6 +48,7 @@ module.exports = {
         TidakHadir: await Confirmation.find({Place: 'tlg'}).countDocuments({
           Confirmation: 'Tidak Hadir',
         }),
+        Total: await Confirmation.find({Place: 'tlg'}).countDocuments(),
       };
 
       let count_confirm_kdr = {
@@ -57,11 +58,13 @@ module.exports = {
         TidakHadir: await Confirmation.find({Place: 'kdr'}).countDocuments({
           Confirmation: 'Tidak Hadir',
         }),
+        Total: await Confirmation.find({Place: 'kdr'}).countDocuments(),
       };
 
       const payload = {
         Tulungagung: count_confirm_tlg,
         Kediri: count_confirm_kdr,
+        Total_All: await Confirmation.find().countDocuments(),
       };
 
       res.status(200).json({
