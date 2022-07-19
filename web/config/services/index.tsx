@@ -1,6 +1,6 @@
 import {callAPI} from '../api';
 
-const ROOT_API = process.env.NEXT_PUBLIC_API_LOCAL;
+const ROOT_API = process.env.NEXT_PUBLIC_API;
 
 export const getGreetingList = async () => {
   const url = `${ROOT_API}/greetings/list`;
