@@ -4,7 +4,7 @@ module.exports = {
   confirmList: async (_, res) => {
     try {
       const Data = await Confirmation.find().select(
-        '_id Name Confirmation createdAt updatedAt',
+        'Name Confirmation createdAt updatedAt',
       );
 
       res.status(200).json({
@@ -58,6 +58,22 @@ module.exports = {
         Success: true,
         Message: '',
         Data: payload,
+      });
+    } catch (err) {
+      res.status(500).json({Message: err.message || 'Internal server error!'});
+    }
+  },
+  getConfirmByName: async (req, res) => {
+    try {
+      const {Name} = req.body;
+      const Data = await Confirmation.findOne({Name}).select(
+        'Name Confirmation',
+      );
+
+      res.status(200).json({
+        Success: true,
+        Message: '',
+        Data,
       });
     } catch (err) {
       res.status(500).json({Message: err.message || 'Internal server error!'});

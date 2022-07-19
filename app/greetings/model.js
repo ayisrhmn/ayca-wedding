@@ -10,6 +10,10 @@ let greetingSchema = mongoose.Schema(
       type: String,
       require: [true, 'Greeting must be filled!'],
     },
+    Color: {
+      type: String,
+      require: [true, 'Color must be filled!'],
+    },
   },
   {timestamps: true},
 );

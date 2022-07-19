@@ -3,9 +3,9 @@ const Greetings = require('./model');
 module.exports = {
   greetingList: async (_, res) => {
     try {
-      const Data = await Greetings.find().select(
-        '_id Name Greeting createdAt updatedAt',
-      );
+      const Data = await Greetings.find()
+        .sort({createdAt: -1})
+        .select('Name Greeting Color createdAt updatedAt');
 
       res.status(200).json({
         Success: true,
