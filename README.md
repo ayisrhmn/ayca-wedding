@@ -8,4 +8,4 @@
 - Run dev/local service `yarn dev`
 - Run prod service `yarn prod`
 - Run web frontend `cd web; yarn dev`, you may need to run `yarn install` to download required components
-- Access http://localhost:3000
+- Access http://localhost:8080
