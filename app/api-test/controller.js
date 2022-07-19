@@ -2,11 +2,12 @@ module.exports = {
   index: async (_, res) => {
     try {
       res.status(200).json({
-        title: 'Aycashop Admin (Backend & API)',
-        message: 'alive',
+        Success: true,
+        Message: 'alive',
+        Value: 'ayca-wedding | api-test',
       });
     } catch (err) {
-      res.status(500).json({message: err.message || 'Internal server error!'});
+      res.status(500).json({Message: err.message || 'Internal server error!'});
     }
   },
 };
