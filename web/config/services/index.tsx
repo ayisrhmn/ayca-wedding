@@ -1,39 +1,42 @@
 import {callAPI} from '../api';
 
-const ROOT_API = process.env.NEXT_PUBLIC_API;
+const ROOT_API = process.env.NEXT_PUBLIC_API_LOCAL;
 
-export const getHomePage = async () => {
-  const url = `${ROOT_API}/landingpage`;
+export const getGreetingList = async () => {
+  const url = `${ROOT_API}/greetings/list`;
 
   return callAPI({
     url,
-    method: 'GET',
+    method: 'POST',
   });
 };
 
-export const getProductByCategory = async (id: any) => {
-  const url = `${ROOT_API}/landingpage/category/${id}`;
+export const createGreeting = async (data: any) => {
+  const url = `${ROOT_API}/greetings/create`;
 
   return callAPI({
     url,
-    method: 'GET',
+    method: 'POST',
+    data,
   });
 };
 
-export const getCategoryPage = async () => {
-  const url = `${ROOT_API}/landingpage/category`;
+export const getConfirmByName = async (data: any) => {
+  const url = `${ROOT_API}/confirmation/by-name`;
 
   return callAPI({
     url,
-    method: 'GET',
+    method: 'POST',
+    data,
   });
 };
 
-export const getDetailProduct = async (id: string) => {
-  const url = `${ROOT_API}/landingpage/product/${id}`;
+export const createConfirmation = async (data: any) => {
+  const url = `${ROOT_API}/confirmation/create`;
 
   return callAPI({
     url,
-    method: 'GET',
+    method: 'POST',
+    data,
   });
 };

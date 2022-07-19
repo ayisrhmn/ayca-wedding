@@ -1,19 +1,66 @@
 import React from 'react';
 import {Button, Card, Col, Container, Row} from 'react-bootstrap';
+import {toast} from 'react-toastify';
+import {createConfirmation, getConfirmByName} from '../../config/services';
 
-const ConfirmSection = () => {
+interface ConfirmProps {
+  guestName: string;
+}
+
+const ConfirmSection = (props: ConfirmProps) => {
   const [isConfirm, setIsConfirm] = React.useState(false);
-  const [valConfirm, setValConfirm] = React.useState('');
+  const [dtConfirmByName, setDtConfirmByName] = React.useState({
+    _id: '',
+    Name: '',
+    Confirmation: '',
+  });
+
+  const Name = props.guestName;
 
   React.useEffect(() => {
-    return () => {};
-  }, [valConfirm]);
+    initData();
 
-  const onConfirm = (val: any) => {
-    setIsConfirm(true);
-    setValConfirm(val);
-    alert(val);
+    return () => {};
+  }, []);
+
+  const initData = async () => {
+    let payload = {
+      Name,
+    };
+
+    await getConfirmByName(payload).then((res) => {
+      if (res.Error) {
+        toast.error(res.Message);
+      } else {
+        if (res.Data !== null) {
+          setDtConfirmByName(res.Data);
+        }
+      }
+    });
   };
+
+  const onConfirm = async (val: any) => {
+    setIsConfirm(true);
+
+    let payload = {
+      Name,
+      Confirmation: val,
+    };
+
+    await createConfirmation(payload).then((res) => {
+      if (res.Error) {
+        toast.error(res.Message);
+      } else {
+        toast.success(
+          `Thank you Kak ${Name} atas konfirmasinya! ${String.fromCodePoint(
+            0x1f60d,
+          )}`,
+        );
+      }
+    });
+  };
+
+  const checkGuestName = dtConfirmByName?.Name === Name;
 
   return (
     <section className="confirm-section py-5">
@@ -28,7 +75,11 @@ const ConfirmSection = () => {
                 className="my-4"
                 data-aos="fade"
                 data-aos-duration="2000">
-                {!isConfirm ? (
+                {isConfirm || checkGuestName ? (
+                  <Card.Title className="title text-center">
+                    Terima Kasih atas responnya yaa! &#10084;
+                  </Card.Title>
+                ) : (
                   <>
                     <Card.Title className="title text-center mb-3 pb-3">
                       Apakah Anda Akan Hadir?
@@ -48,10 +99,6 @@ const ConfirmSection = () => {
                       </Button>
                     </div>
                   </>
-                ) : (
-                  <Card.Title className="title text-center">
-                    Terima Kasih atas responnya yaa! &#10084;
-                  </Card.Title>
                 )}
               </Card.Body>
             </Card>

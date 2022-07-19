@@ -32,9 +32,11 @@ const Home = () => {
   const [playing, setPlaying, toggle] = useAudio(urlAudio) as any;
 
   const [showCover, setShowCover] = React.useState(true);
+
   const [guestName, setGuestName] = React.useState('');
   const [placeName, setPlaceName] = React.useState('');
   const [sessionNum, setSessionNum] = React.useState('');
+
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
@@ -105,7 +107,7 @@ const Home = () => {
           />
           <OurStorySection storyData={storyData} isMobile={isMobile} />
           <GallerySection imgGallery={imgGallery} />
-          <ConfirmSection />
+          {guestName !== '' && <ConfirmSection guestName={guestName} />}
           <GreetingsSection />
           <FooterSection place={placeName} />
           <FloatingToggleMusic toggle={toggle} playing={playing} />

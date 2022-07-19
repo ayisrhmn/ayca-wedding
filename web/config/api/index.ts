@@ -11,18 +11,18 @@ export const callAPI = async (props: AxiosRequestConfig) => {
 
   if (res.status > 300) {
     const response = {
-      error: true,
-      message: res.data.message,
-      data: null,
+      Error: true,
+      Message: res.data.message,
+      Data: null,
     };
 
     return response;
   }
 
   const response = {
-    error: false,
-    message: 'Success',
-    data: res.data.data,
+    Error: false,
+    Message: 'Success',
+    Data: res.data.Data,
   };
 
   return response;

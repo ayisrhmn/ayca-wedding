@@ -5,6 +5,7 @@ import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-activity/dist/library.css';
 import moment from 'moment';
 import 'moment/locale/id';
 
