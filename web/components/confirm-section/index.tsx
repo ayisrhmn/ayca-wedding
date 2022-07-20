@@ -18,7 +18,7 @@ const ConfirmSection = (props: ConfirmProps) => {
   });
 
   const Name = props.guestName;
-  const Place = props.place;
+  const Place = props.place === '' ? 'tlg' : props.place;
 
   React.useEffect(() => {
     initData();

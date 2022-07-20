@@ -72,14 +72,9 @@ const GreetingsSection = () => {
 
   return (
     <section className="greetings-section py-5">
-      <Container className="my-3">
-        <h3 className="title mb-5" data-aos="fade-up" data-aos-duration="1000">
-          Best Wishes &#10084;
-        </h3>
-        <Row
-          className="justify-content-center mt-5"
-          data-aos="fade-up"
-          data-aos-duration="2000">
+      <Container className="my-3" data-aos="fade-up" data-aos-duration="1000">
+        <h3 className="title mb-5">Best Wishes &#10084;</h3>
+        <Row className="justify-content-center mt-5">
           <Col md={8}>
             <div className="mb-5">
               <Form.Group className="mb-3" controlId="formName">
@@ -136,7 +131,7 @@ const GreetingsSection = () => {
                       <p className="mb-3 datetime">
                         {moment(item.createdAt).fromNow()}
                       </p>
-                      <p className="mb-0 greet" style={{whiteSpace: 'pre'}}>
+                      <p className="mb-0 greet">
                         {item.Greeting}
                       </p>
                     </Card.Body>
