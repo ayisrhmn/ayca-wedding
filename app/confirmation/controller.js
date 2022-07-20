@@ -80,7 +80,7 @@ module.exports = {
     try {
       const {Name} = req.body;
       const Data = await Confirmation.findOne({Name}).select(
-        'Name Place Confirmation',
+        'Name Place Confirmation createdAt updatedAt',
       );
 
       res.status(200).json({
@@ -96,7 +96,7 @@ module.exports = {
     try {
       const {Place} = req.body;
       const Data = await Confirmation.find({Place}).select(
-        'Name Place Confirmation',
+        'Name Place Confirmation createdAt updatedAt',
       );
 
       res.status(200).json({
@@ -112,7 +112,7 @@ module.exports = {
     try {
       const {Confirm} = req.body;
       const Data = await Confirmation.find({Confirmation: Confirm}).select(
-        'Name Place Confirmation',
+        'Name Place Confirmation createdAt updatedAt',
       );
 
       res.status(200).json({
