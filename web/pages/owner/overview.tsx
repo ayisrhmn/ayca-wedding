@@ -74,6 +74,16 @@ const OverviewSection = () => {
       .finally(() => setLoadingTable(false));
   };
 
+  const filterData = (status: any) => {
+    if (status === 'Place') {
+      return listByPlace;
+    } else if (status === 'Confirm') {
+      return listByConfirm;
+    } else {
+      return listConfirm;
+    }
+  };
+
   const onSearch = async (name: any) => {
     setLoadingDtByName(true);
     await getConfirmByName({Name: name})
@@ -83,12 +93,17 @@ const OverviewSection = () => {
       .finally(() => setLoadingDtByName(false));
   };
 
+  const formatDate = 'ddd, DD MMM YYYY';
+
   return (
     <section className="py-5 px-2">
       <style>{`
         html,
         body {
           background-color: #fff !important;
+        }
+        th, td {
+          font-size: 11px
         }
       `}</style>
       <Container>
@@ -145,11 +160,9 @@ const OverviewSection = () => {
             </Col>
             <Col md={12} className="mb-4">
               <h4 className="mb-3 fw-bold">
-                Confirmation List (
+                Confirm List (
                 {status === 'Place'
-                  ? place === 'tlg'
-                    ? 'Tulugagung'
-                    : 'Kediri'
+                  ? place.toUpperCase()
                   : status === 'Confirm'
                   ? confirm
                   : status}
@@ -171,7 +184,7 @@ const OverviewSection = () => {
                     setStatus('Place');
                     setPlace('tlg');
                   }}>
-                  Tulungagung
+                  TLG
                 </Button>
                 <Button
                   variant="warning"
@@ -181,7 +194,7 @@ const OverviewSection = () => {
                     setStatus('Place');
                     setPlace('kdr');
                   }}>
-                  Kediri
+                  KDR
                 </Button>
                 <Button
                   variant="success"
@@ -218,63 +231,15 @@ const OverviewSection = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {status === 'All' && (
-                      <>
-                        {listConfirm?.map((item: any, i: number) => (
-                          <tr className="text-center" key={i}>
-                            <td>{i + 1}</td>
-                            <td>{item.Name}</td>
-                            <td>
-                              {item.Place === 'tlg' ? 'Tulungagung' : 'Kediri'}
-                            </td>
-                            <td>{item.Confirmation}</td>
-                            <td>
-                              {moment(item.createdAt).format(
-                                'dddd, DD MMMM YYYY',
-                              )}
-                            </td>
-                          </tr>
-                        ))}
-                      </>
-                    )}
-                    {status === 'Place' && (
-                      <>
-                        {listByPlace?.map((item: any, i: number) => (
-                          <tr className="text-center" key={i}>
-                            <td>{i + 1}</td>
-                            <td>{item.Name}</td>
-                            <td>
-                              {item.Place === 'tlg' ? 'Tulungagung' : 'Kediri'}
-                            </td>
-                            <td>{item.Confirmation}</td>
-                            <td>
-                              {moment(item.createdAt).format(
-                                'dddd, DD MMMM YYYY',
-                              )}
-                            </td>
-                          </tr>
-                        ))}
-                      </>
-                    )}
-                    {status === 'Confirm' && (
-                      <>
-                        {listByConfirm?.map((item: any, i: number) => (
-                          <tr className="text-center" key={i}>
-                            <td>{i + 1}</td>
-                            <td>{item.Name}</td>
-                            <td>
-                              {item.Place === 'tlg' ? 'Tulungagung' : 'Kediri'}
-                            </td>
-                            <td>{item.Confirmation}</td>
-                            <td>
-                              {moment(item.createdAt).format(
-                                'dddd, DD MMMM YYYY',
-                              )}
-                            </td>
-                          </tr>
-                        ))}
-                      </>
-                    )}
+                    {filterData(status)?.map((item: any, i: number) => (
+                      <tr className="text-center" key={i}>
+                        <td>{i + 1}</td>
+                        <td>{item.Name}</td>
+                        <td>{item.Place.toUpperCase()}</td>
+                        <td>{item.Confirmation}</td>
+                        <td>{moment(item.createdAt).format(formatDate)}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </Table>
               )}
@@ -288,7 +253,7 @@ const OverviewSection = () => {
                     value={name}
                     className="mb-2"
                     placeholder="Search by Name"
-                    onChange={(val) => setName(val.target.value)}
+                    onChange={(text) => setName(text.target.value)}
                   />
                   <Button
                     variant="primary mb-4"
@@ -307,25 +272,17 @@ const OverviewSection = () => {
                             <tr className="text-center">
                               <th>Name</th>
                               <th>Place</th>
-                              <th>Confirmation</th>
+                              <th>Confirm</th>
                               <th>Created At</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr className="text-center">
                               <td>{dtByName?.Name}</td>
-                              <td>
-                                {dtByName?.Place === 'tlg'
-                                  ? 'Tulungagung'
-                                  : 'Kediri'}
-                              </td>
+                              <td>{dtByName?.Place?.toUpperCase()}</td>
                               <td>{dtByName?.Confirmation}</td>
                               <td>
-                                <td>
-                                  {moment(dtByName?.createdAt).format(
-                                    'dddd, DD MMMM YYYY',
-                                  )}
-                                </td>
+                                {moment(dtByName?.createdAt).format(formatDate)}
                               </td>
                             </tr>
                           </tbody>
