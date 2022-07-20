@@ -40,3 +40,41 @@ export const createConfirmation = async (data: any) => {
     data,
   });
 };
+
+export const getConfirmByCount = async () => {
+  const url = `${ROOT_API}/confirmation/count`;
+
+  return callAPI({
+    url,
+    method: 'POST',
+  });
+};
+
+export const getConfirmList = async () => {
+  const url = `${ROOT_API}/confirmation/list`;
+
+  return callAPI({
+    url,
+    method: 'POST',
+  });
+};
+
+export const getConfirmByPlace = async (data: any) => {
+  const url = `${ROOT_API}/confirmation/by-place`;
+
+  return callAPI({
+    url,
+    method: 'POST',
+    data,
+  });
+};
+
+export const getByConfirm = async (data: any) => {
+  const url = `${ROOT_API}/confirmation/by-confirm`;
+
+  return callAPI({
+    url,
+    method: 'POST',
+    data,
+  });
+};
