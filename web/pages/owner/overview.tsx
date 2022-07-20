@@ -102,7 +102,7 @@ const OverviewSection = () => {
               <Row>
                 <Col md={6}>
                   <h6 className="mb-4 fw-bold">Tulungagung</h6>
-                  <Table striped bordered hover>
+                  <Table striped bordered hover variant="dark" responsive>
                     <thead>
                       <tr className="text-center">
                         <th>Hadir</th>
@@ -121,7 +121,7 @@ const OverviewSection = () => {
                 </Col>
                 <Col md={6}>
                   <h6 className="mb-4 fw-bold">Kediri</h6>
-                  <Table striped bordered hover>
+                  <Table striped bordered hover variant="dark" responsive>
                     <thead>
                       <tr className="text-center">
                         <th>Hadir</th>
@@ -207,7 +207,7 @@ const OverviewSection = () => {
               {loadingTable ? (
                 <Digital color={'#414141'} />
               ) : (
-                <Table striped bordered hover>
+                <Table striped bordered hover variant="dark" responsive>
                   <thead>
                     <tr className="text-center">
                       <th>No.</th>
@@ -302,7 +302,7 @@ const OverviewSection = () => {
                   ) : (
                     <>
                       {dtByName?.Name !== undefined && (
-                        <Table striped bordered hover>
+                        <Table striped bordered hover variant="dark" responsive>
                           <thead>
                             <tr className="text-center">
                               <th>Name</th>
