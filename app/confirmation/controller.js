@@ -92,4 +92,36 @@ module.exports = {
       res.status(500).json({Message: err.message || 'Internal server error!'});
     }
   },
+  getConfirmByPlace: async (req, res) => {
+    try {
+      const {Place} = req.body;
+      const Data = await Confirmation.find({Place}).select(
+        'Name Place Confirmation',
+      );
+
+      res.status(200).json({
+        Success: true,
+        Message: '',
+        Data,
+      });
+    } catch (err) {
+      res.status(500).json({Message: err.message || 'Internal server error!'});
+    }
+  },
+  getByConfirm: async (req, res) => {
+    try {
+      const {Confirm} = req.body;
+      const Data = await Confirmation.find({Confirmation: Confirm}).select(
+        'Name Place Confirmation',
+      );
+
+      res.status(200).json({
+        Success: true,
+        Message: '',
+        Data,
+      });
+    } catch (err) {
+      res.status(500).json({Message: err.message || 'Internal server error!'});
+    }
+  },
 };
