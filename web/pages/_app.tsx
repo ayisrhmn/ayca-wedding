@@ -27,37 +27,28 @@ function MyApp({Component, pageProps}: AppProps) {
 
         <title>The Wedding - {coupleName}</title>
 
-        <meta
-          name="robots"
-          content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={`The Wedding - ${coupleName}`} />
-        <meta
-          property="og:description"
-          content="We invited you to celebrate our wedding"
-        />
+        {/* Open Graph */}
         <meta
           property="og:url"
-          content="https://rikafariz-wedding.vercel.app"
+          content={'https://rikafariz-wedding.vercel.app'}
+          key="ogurl"
         />
-        <meta name="keywords" content="rikafariz-wedding, ayca-wedding" />
-        <meta name="author" content="Muhammad Fariz Rahman" />
-        <meta property="og:site_name" content="Wedding Invitation" />
-        <meta property="article:section" content="Website Invitation" />
-        <meta property="og:image" content={imgUrl} />
-        <meta property="og:image:secure_url" content={imgUrl} />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="400" />
-        <meta property="og:image:alt" content={`The Wedding - ${coupleName}`} />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`The Wedding - ${coupleName}`} />
+        <meta property="og:image" content={imgUrl} key="ogimage" />
         <meta
-          name="twitter:description"
-          content="We invited you to celebrate our wedding"
+          property="og:site_name"
+          content={'Wedding Invitation'}
+          key="ogsitename"
         />
-        <meta name="twitter:image" content={imgUrl} />
+        <meta
+          property="og:title"
+          content={`The Wedding - ${coupleName}`}
+          key="ogtitle"
+        />
+        <meta
+          property="og:description"
+          content={'We invited you to celebrate our wedding'}
+          key="ogdesc"
+        />
       </Head>
       <Component {...pageProps} />
       <script
