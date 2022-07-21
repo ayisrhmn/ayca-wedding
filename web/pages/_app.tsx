@@ -17,7 +17,7 @@ function MyApp({Component, pageProps}: AppProps) {
   const {place} = router.query;
 
   const coupleName = place === 'kdr' ? 'Fariz & Rika' : 'Rika & Fariz';
-  const imgUrl = '/img/web-thumb.jpg';
+  const imgUrl = 'https://rikafariz-wedding.vercel.app/img/web-thumb.jpg';
 
   return (
     <>
@@ -26,7 +26,7 @@ function MyApp({Component, pageProps}: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>The Wedding - {coupleName}</title>
-        
+
         <meta
           name="robots"
           content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
