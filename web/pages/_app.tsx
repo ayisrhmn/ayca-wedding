@@ -17,15 +17,13 @@ function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
   const {place} = router.query;
 
-  const [coupleName, setCoupleName] = React.useState('');
-
+  const coupleName =
+    place !== undefined
+      ? place === 'kdr'
+        ? 'Fariz & Rika'
+        : 'Rika & Fariz'
+      : 'Rika & Fariz';
   const imgUrl = 'https://rikafariz-wedding.vercel.app/img/web-thumb.jpg';
-
-  React.useEffect(() => {
-    setCoupleName(place === 'kdr' ? 'Fariz & Rika' : 'Rika & Fariz');
-
-    return () => {};
-  }, [place]);
 
   return (
     <>
