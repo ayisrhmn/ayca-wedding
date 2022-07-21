@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import '../styles/responsive.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import {useRouter} from 'next/router';
@@ -16,8 +17,15 @@ function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
   const {place} = router.query;
 
-  const coupleName = place === 'kdr' ? 'Fariz & Rika' : 'Rika & Fariz';
-  const imgUrl = '/img/web-thumb.jpg';
+  const [coupleName, setCoupleName] = React.useState('');
+
+  const imgUrl = 'https://rikafariz-wedding.vercel.app/img/web-thumb.jpg';
+
+  React.useEffect(() => {
+    setCoupleName(place === 'kdr' ? 'Fariz & Rika' : 'Rika & Fariz');
+
+    return () => {};
+  }, [place]);
 
   return (
     <>
@@ -39,20 +47,11 @@ function MyApp({Component, pageProps}: AppProps) {
           content={'Wedding Invitation'}
           key="ogsitename"
         />
-        {place === 'tlg' && (
-          <meta
-            property="og:title"
-            content={'The Wedding - Rika & Fariz'}
-            key="ogtitle"
-          />
-        )}
-        {place === 'kdr' && (
-          <meta
-            property="og:title"
-            content={'The Wedding - Fariz & Rika'}
-            key="ogtitle"
-          />
-        )}
+        <meta
+          property="og:title"
+          content={`The Wedding - ${coupleName}`}
+          key="ogtitle"
+        />
         <meta
           property="og:description"
           content={'We invited you to celebrate our wedding'}
