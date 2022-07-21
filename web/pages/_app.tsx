@@ -26,7 +26,11 @@ function MyApp({Component, pageProps}: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>The Wedding - {coupleName}</title>
-
+        
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`The Wedding - ${coupleName}`} />
         <meta
