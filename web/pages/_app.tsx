@@ -17,7 +17,7 @@ function MyApp({Component, pageProps}: AppProps) {
   const {place} = router.query;
 
   const coupleName = place === 'kdr' ? 'Fariz & Rika' : 'Rika & Fariz';
-  const imgUrl = 'https://rikafariz-wedding.vercel.app/img/web-thumb.jpg';
+  const imgUrl = '/img/web-thumb.jpg';
 
   return (
     <>
@@ -39,11 +39,20 @@ function MyApp({Component, pageProps}: AppProps) {
           content={'Wedding Invitation'}
           key="ogsitename"
         />
-        <meta
-          property="og:title"
-          content={`The Wedding - ${coupleName}`}
-          key="ogtitle"
-        />
+        {place === 'tlg' && (
+          <meta
+            property="og:title"
+            content={'The Wedding - Rika & Fariz'}
+            key="ogtitle"
+          />
+        )}
+        {place === 'kdr' && (
+          <meta
+            property="og:title"
+            content={'The Wedding - Fariz & Rika'}
+            key="ogtitle"
+          />
+        )}
         <meta
           property="og:description"
           content={'We invited you to celebrate our wedding'}
