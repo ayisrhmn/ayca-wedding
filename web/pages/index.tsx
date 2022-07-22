@@ -12,6 +12,10 @@ import CountdownSection from '../components/countdown-section';
 import OurStorySection from '../components/our-story-section';
 import FloatingToggleMusic from '../components/floating-toggle-music';
 import GallerySection from '../components/gallery-section';
+import ConfirmSection from '../components/confirm-section';
+import GreetingsSection from '../components/greetings-section';
+import FooterSection from '../components/footer-section';
+import ModalProtocol from '../components/modal-protocol';
 import {useAudio} from '../utils/helper';
 import {
   dtCouple,
@@ -20,9 +24,6 @@ import {
   storyData,
   imgGallery,
 } from '../config/data';
-import ConfirmSection from '../components/confirm-section';
-import GreetingsSection from '../components/greetings-section';
-import FooterSection from '../components/footer-section';
 
 const Home = () => {
   const router = useRouter();
@@ -38,6 +39,8 @@ const Home = () => {
   const [sessionNum, setSessionNum] = React.useState('');
 
   const [isMobile, setIsMobile] = React.useState(false);
+
+  const [showProtocol, setShowProtocol] = React.useState(false);
 
   React.useEffect(() => {
     AOS.init();
@@ -80,6 +83,7 @@ const Home = () => {
           onClick={() => {
             setShowCover(false);
             setPlaying(true);
+            setShowProtocol(true);
           }}
         />
       ) : (
@@ -113,6 +117,7 @@ const Home = () => {
           <GreetingsSection />
           <FooterSection place={placeName} />
           <FloatingToggleMusic toggle={toggle} playing={playing} />
+          <ModalProtocol show={showProtocol} place={placeName} />
         </>
       )}
     </>
