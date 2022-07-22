@@ -14,7 +14,7 @@ const ModalProtocol = (props: ProtocolProps) => {
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
         <Modal.Title className="protocol-title">
-          Covid 19 - Protocol
+          Covid 19 Protocol
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="m-0 p-0">
