@@ -81,7 +81,7 @@ const ConfirmSection = (props: ConfirmProps) => {
                 data-aos-duration="2000">
                 {isConfirm || checkGuestName ? (
                   <Card.Title className="title text-center">
-                    Terima Kasih atas responnya yaa! &#10084;
+                    Terima Kasih atas respon kehadirannya yaa! &#10084;
                   </Card.Title>
                 ) : (
                   <>

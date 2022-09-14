@@ -55,7 +55,7 @@ export const storyData = {
   },
 };
 
-export const imgGallery = [...Array(14)].map((_, i: number) => {
+export const imgGallery = [...Array(19)].map((_, i: number) => {
   return {
     original: `/img/gallery/img-${i + 1}.jpg`,
     thumbnail: `/img/gallery/img-thumb-${i + 1}.jpg`,
