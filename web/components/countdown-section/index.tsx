@@ -87,8 +87,8 @@ const CountdownSection = (props: CountdownProps) => {
                       <Countdown
                         date={
                           props.place === 'kdr'
-                            ? props.eventKdr.startSesi1
-                            : props.eventTlg.akad
+                            ? props.eventKdr.startSesi1.toString()
+                            : props.eventTlg.akad.toString()
                         }
                         renderer={renderer}
                       />
