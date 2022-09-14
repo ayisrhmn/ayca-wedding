@@ -10,6 +10,7 @@ import BrownSection from '../components/brown-section';
 import EventSection from '../components/event-section';
 import CountdownSection from '../components/countdown-section';
 import OurStorySection from '../components/our-story-section';
+import FloatingQR from '../components/floating-qr';
 import FloatingToggleMusic from '../components/floating-toggle-music';
 import GallerySection from '../components/gallery-section';
 import ConfirmSection from '../components/confirm-section';
@@ -39,6 +40,14 @@ const Home = () => {
   const [sessionNum, setSessionNum] = React.useState('');
 
   const [isMobile, setIsMobile] = React.useState(false);
+
+  const [showQR, setShowQR] = React.useState(false);
+  const onShowQR = () => {
+    setShowQR(true);
+  };
+  const onHideQR = () => {
+    setShowQR(false);
+  };
 
   const [showProtocol, setShowProtocol] = React.useState(false);
 
@@ -116,6 +125,12 @@ const Home = () => {
           )}
           <GreetingsSection />
           <FooterSection place={placeName} />
+          <FloatingQR
+            show={showQR}
+            onClick={onShowQR}
+            onHide={onHideQR}
+            place={placeName}
+          />
           <FloatingToggleMusic toggle={toggle} playing={playing} />
           <ModalProtocol show={showProtocol} place={placeName} />
         </>
