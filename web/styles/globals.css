@@ -99,6 +99,7 @@ body {
   text-decoration: none;
   opacity: 0.6;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .link-toscroll:hover {
@@ -384,10 +385,13 @@ body {
   text-align: justify;
 }
 
-.floating-qr {
+.toggle-music {
   display: inline-flex;
   background-color: #e0c99d;
-  padding: 12px 14px 12px 14px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   transition: 0.2s;
   cursor: pointer;
@@ -399,10 +403,31 @@ body {
   -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
 }
 
-.toggle-music {
+.floating-qr {
   display: inline-flex;
   background-color: #e0c99d;
-  padding: 12px 14px 12px 14px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  position: fixed;
+  top: 72px;
+  right: 16px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.floating-scrollup {
+  display: inline-flex;
+  background-color: #e0c99d;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   transition: 0.2s;
   cursor: pointer;
@@ -415,7 +440,11 @@ body {
 }
 
 .toggle-music:hover,
-.toggle-music:focus {
+.toggle-music:focus,
+.floating-qr:hover,
+.floating-qr:focus,
+.floating-scrollup:hover,
+.floating-scrollup:focus {
   background-color: #f5dfb5;
 }
 

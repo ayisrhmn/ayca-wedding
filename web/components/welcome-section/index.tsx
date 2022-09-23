@@ -6,6 +6,8 @@ import moment from 'moment';
 
 interface WelcomeProps {
   place: string;
+  scrollUpRef: any;
+  onScrollDownClick: Function | any;
 }
 
 const WelcomeSection = (props: WelcomeProps) => {
@@ -13,7 +15,8 @@ const WelcomeSection = (props: WelcomeProps) => {
     <section
       className="welcome-fullbg"
       data-aos="fade-up"
-      data-aos-duration="1000">
+      data-aos-duration="1000"
+      ref={props.scrollUpRef}>
       <Container>
         <Row>
           <Col md={12} className="d-flex justify-content-center">
@@ -31,14 +34,18 @@ const WelcomeSection = (props: WelcomeProps) => {
                   | {props.place === 'kdr' ? 'Kediri' : 'Tulungagung'}
                 </p>
               </div>
-              <a href="#prayer_section" className="link-toscroll">
+              <div className="link-toscroll" onClick={props.onScrollDownClick}>
                 <p className="text-center text-white scroll-text mb-1">
                   Scroll down
                 </p>
                 <div className="text-center icon-down">
-                  <FontAwesomeIcon icon={faChevronDown} color={'#FFFFFF'} size={'lg'} />
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    color={'#FFFFFF'}
+                    size={'lg'}
+                  />
                 </div>
-              </a>
+              </div>
             </div>
           </Col>
         </Row>
