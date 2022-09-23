@@ -22,7 +22,7 @@ export const dtCouple = [
 ];
 
 export const eventTlg = {
-  akad: moment('2022-11-19 08:00'),
+  akad: moment('2022-11-19 09:00'),
   startResepsi: moment('2022-11-19 12:30'),
   endResepsi: moment('2022-11-19 15:00'),
   location: 'https://maps.app.goo.gl/GuNWQCL9GyHxyzKb6',
@@ -31,14 +31,14 @@ export const eventTlg = {
 export const eventKdr = {
   startSesi1: moment('2022-11-26 10:00'),
   endSesi1: moment('2022-11-26 12:00'),
-  startSesi2: moment('2022-11-26 13:00'),
-  endSesi2: moment('2022-11-26 15:00'),
+  startSesi2: moment('2022-11-26 12:00'),
+  endSesi2: moment('2022-11-26 14:00'),
   location: 'https://maps.app.goo.gl/1jsuAhE9zRceu7CdA',
 };
 
 export const storyData = {
   firstMeet: {
-    title: 'First Meet ~ 2017',
+    title: 'First Meet ~ 2016',
     desc: 'Lebih tepatnya pada bulan Januari 2017 adalah awal pertemuan kami pada saat event di calon sekolah kami Prisma Profesional. Sama sama belum saling kenal dan kita berkenalan pada saat itu tanpa ada maksud untuk saling mencintai. Beberapa saat setelah itu kami sudah mulai masuk di Prisma Profesional dan hanya berteman biasa bahkan kita bukan salah satu teman dekat.',
   },
   expressFeelings: {

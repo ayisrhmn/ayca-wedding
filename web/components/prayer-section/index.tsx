@@ -3,7 +3,7 @@ import {Col, Container, Row, Card} from 'react-bootstrap';
 
 const PrayerSection = () => {
   return (
-    <section className="prayer-section py-5">
+    <section className="prayer-section py-5" id="prayer_section">
       <Container className="my-3">
         <Row>
           <Col md={12}>
