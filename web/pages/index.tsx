@@ -12,6 +12,7 @@ import CountdownSection from '../components/countdown-section';
 import OurStorySection from '../components/our-story-section';
 import FloatingQR from '../components/floating-qr';
 import FloatingToggleMusic from '../components/floating-toggle-music';
+import FloatingScrollUp from '../components/floating-scrollup';
 import GallerySection from '../components/gallery-section';
 import ConfirmSection from '../components/confirm-section';
 import GreetingsSection from '../components/greetings-section';
@@ -51,9 +52,14 @@ const Home = () => {
 
   const [showProtocol, setShowProtocol] = React.useState(false);
 
+  const [visibleScrollTop, setVisibleScrollTop] = React.useState(false);
+  const scrollDownRef = React.useRef() as any;
+  const scrollUpRef = React.useRef() as any;
+
   React.useEffect(() => {
     AOS.init();
     isMobileScreen();
+    window.addEventListener('scroll', scrollTopVisible);
 
     return () => {};
   }, []);
@@ -81,6 +87,27 @@ const Home = () => {
     }
   };
 
+  const goScrollDown = () => {
+    if (scrollDownRef.current) {
+      scrollDownRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+
+  const scrollTopVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisibleScrollTop(true);
+    } else if (scrolled <= 300) {
+      setVisibleScrollTop(false);
+    }
+  };
+
+  const goScrollUp = () => {
+    if (scrollUpRef.current) {
+      scrollUpRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+
   return (
     <>
       {showCover ? (
@@ -97,8 +124,12 @@ const Home = () => {
         />
       ) : (
         <>
-          <WelcomeSection place={placeName} />
-          <PrayerSection />
+          <WelcomeSection
+            place={placeName}
+            scrollUpRef={scrollUpRef}
+            onScrollDownClick={goScrollDown}
+          />
+          <PrayerSection scrollDownRef={scrollDownRef} />
           <CoupleSection
             data={dtCouple}
             place={placeName}
@@ -132,6 +163,7 @@ const Home = () => {
             place={placeName}
           />
           <FloatingToggleMusic toggle={toggle} playing={playing} />
+          {visibleScrollTop && <FloatingScrollUp onClick={goScrollUp} />}
           <ModalProtocol show={showProtocol} place={placeName} />
         </>
       )}

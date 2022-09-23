@@ -1,9 +1,13 @@
 import React from 'react';
 import {Col, Container, Row, Card} from 'react-bootstrap';
 
-const PrayerSection = () => {
+interface PrayerProps {
+  scrollDownRef: any;
+}
+
+const PrayerSection = (props: PrayerProps) => {
   return (
-    <section className="prayer-section py-5" id="prayer_section">
+    <section className="prayer-section py-5" ref={props.scrollDownRef}>
       <Container className="my-3">
         <Row>
           <Col md={12}>
