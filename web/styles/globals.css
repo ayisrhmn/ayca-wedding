@@ -93,6 +93,44 @@ body {
   font-size: 12px;
 }
 
+.link-toscroll {
+  display: block;
+  margin-top: 3rem;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.link-toscroll:hover {
+  opacity: 1;
+}
+
+.scroll-text {
+  font-size: 12px;
+}
+
+.icon-down {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .prayer-section,
 .countdown-section,
 .gallery-section {

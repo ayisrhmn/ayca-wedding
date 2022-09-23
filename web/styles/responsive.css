@@ -1,7 +1,19 @@
 /* phone */
 @media (min-width: 280px) and (max-width: 480px) {
   .welcome-content {
-    bottom: 10rem;
+    bottom: 5rem;
+  }
+
+  .link-toscroll {
+    display: block;
+    margin-top: 3rem;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+
+  .link-toscroll:hover {
+    opacity: 1;
   }
 
   .prayer-card {
@@ -119,7 +131,19 @@
 /* tablet or phone with big screen */
 @media (min-width: 481px) and (max-width: 767px) {
   .welcome-content {
-    bottom: 10rem;
+    bottom: 5rem;
+  }
+
+  .link-toscroll {
+    display: block;
+    margin-top: 3rem;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+
+  .link-toscroll:hover {
+    opacity: 1;
   }
 
   .prayer-card {
