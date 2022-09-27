@@ -8,10 +8,13 @@ import {useRouter} from 'next/router';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-activity/dist/library.css';
+import Snowfall from 'react-snowfall';
+import {snowfallConfig} from '../config/data';
 import moment from 'moment';
 import 'moment/locale/id';
 
 moment.locale('id');
+React.useLayoutEffect = React.useEffect;
 
 function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
@@ -51,6 +54,14 @@ function MyApp({Component, pageProps}: AppProps) {
           key="ogdesc"
         />
       </Head>
+      <Snowfall
+        color={snowfallConfig.color}
+        snowflakeCount={snowfallConfig.snowflakeCount}
+        speed={snowfallConfig.speed}
+        wind={snowfallConfig.wind}
+        radius={snowfallConfig.radius}
+        style={snowfallConfig.style}
+      />
       <Component {...pageProps} />
       <ToastContainer />
     </>

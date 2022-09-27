@@ -61,3 +61,17 @@ export const imgGallery = [...Array(19)].map((_, i: number) => {
     thumbnail: `/img/gallery/img-thumb-${i + 1}.jpg`,
   };
 });
+
+export const snowfallConfig: any = {
+  color: '#DEE4FD',
+  snowflakeCount: 200,
+  speed: [0, 2],
+  wind: [0, 2],
+  radius: [0.5, 1],
+  style: {
+    position: 'fixed',
+    width: '100vw',
+    height: '100vh',
+    zIndex: 9999,
+  },
+};
