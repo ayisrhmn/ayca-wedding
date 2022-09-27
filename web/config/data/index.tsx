@@ -64,7 +64,7 @@ export const imgGallery = [...Array(19)].map((_, i: number) => {
 
 export const snowfallConfig: any = {
   color: '#DEE4FD',
-  snowflakeCount: 100,
+  snowflakeCount: 70,
   speed: [0, 2],
   wind: [0, 2],
   radius: [0.5, 1],
