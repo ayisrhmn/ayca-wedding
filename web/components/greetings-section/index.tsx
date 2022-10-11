@@ -11,6 +11,7 @@ const GreetingsSection = () => {
   const [greeting, setGreeting] = React.useState('');
 
   const [loading, setLoading] = React.useState(false);
+  const [loadSubmit, setLoadSubmit] = React.useState(false);
   const [greetingList, setGreetingList] = React.useState([]) as any;
 
   React.useEffect(() => {
@@ -50,6 +51,7 @@ const GreetingsSection = () => {
         `Tulis ucapan buat kami dong ${String.fromCodePoint(0x1f60f)}`,
       );
     } else {
+      setLoadSubmit(true);
       await createGreeting(payload)
         .then((res) => {
           if (res.Error) {
@@ -63,6 +65,7 @@ const GreetingsSection = () => {
           }
         })
         .finally(() => {
+          setLoadSubmit(false);
           setName('');
           setGreeting('');
           initData();
@@ -107,6 +110,7 @@ const GreetingsSection = () => {
                 variant="light"
                 className="btn-greetings"
                 type="button"
+                disabled={loadSubmit}
                 onClick={() => onSubmit(name, greeting)}>
                 Kirim Ucapan
               </Button>
@@ -131,9 +135,7 @@ const GreetingsSection = () => {
                       <p className="mb-3 datetime">
                         {moment(item.createdAt).fromNow()}
                       </p>
-                      <p className="mb-0 greet">
-                        {item.Greeting}
-                      </p>
+                      <p className="mb-0 greet">{item.Greeting}</p>
                     </Card.Body>
                   </Card>
                 </div>

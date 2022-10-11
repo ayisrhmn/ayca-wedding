@@ -22,7 +22,7 @@ export const dtCouple = [
 ];
 
 export const eventTlg = {
-  akad: moment('2022-11-19 09:00'),
+  akad: moment('2022-11-19 08:00'),
   startResepsi: moment('2022-11-19 12:00'),
   endResepsi: moment('2022-11-19 15:00'),
   location: 'https://maps.app.goo.gl/GuNWQCL9GyHxyzKb6',
