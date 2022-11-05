@@ -121,23 +121,27 @@ const GreetingsSection = () => {
               style={{marginBottom: greetingList.length !== 0 ? '3rem' : 0}}>
               {greetingList?.map((item: any, i: number) => (
                 <div className="d-flex mb-4" key={i}>
-                  <div
-                    className="user-pic"
-                    style={{
-                      backgroundColor:
-                        item.Color === '' ? 'lightblue' : item.Color,
-                    }}>
-                    <h3 className="mb-0">{item.Name.charAt(0)}</h3>
-                  </div>
-                  <Card className="card-greetings">
-                    <Card.Body>
-                      <p className="mb-0 sender">{item.Name}</p>
-                      <p className="mb-3 datetime">
-                        {moment(item.createdAt).fromNow()}
-                      </p>
-                      <p className="mb-0 greet">{item.Greeting}</p>
-                    </Card.Body>
-                  </Card>
+                  <section>
+                    <div
+                      className="user-pic"
+                      style={{
+                        backgroundColor:
+                          item.Color === '' ? 'lightblue' : item.Color,
+                      }}>
+                      <h3 className="mb-0">{item.Name.charAt(0)}</h3>
+                    </div>
+                  </section>
+                  <section>
+                    <Card className="card-greetings">
+                      <Card.Body>
+                        <p className="mb-0 sender">{item.Name}</p>
+                        <p className="mb-3 datetime">
+                          {moment(item.createdAt).fromNow()}
+                        </p>
+                        <p className="mb-0 greet">{item.Greeting}</p>
+                      </Card.Body>
+                    </Card>
+                  </section>
                 </div>
               ))}
             </div>
