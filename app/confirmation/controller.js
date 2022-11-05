@@ -79,9 +79,16 @@ module.exports = {
   getConfirmByName: async (req, res) => {
     try {
       const {Name} = req.body;
-      const Data = await Confirmation.findOne({Name}).select(
-        'Name Place Confirmation createdAt updatedAt',
+      let strCapitalize = Name.toLowerCase().replace(
+        /\b[a-z]/g,
+        function (letter) {
+          return letter.toUpperCase();
+        },
       );
+
+      const Data = await Confirmation.findOne({
+        Name: {$regex: strCapitalize},
+      }).select('Name Place Confirmation createdAt updatedAt');
 
       res.status(200).json({
         Success: true,
