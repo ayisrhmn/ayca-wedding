@@ -156,12 +156,12 @@ const Home = () => {
           )}
           <GreetingsSection />
           <FooterSection place={placeName} />
-          <FloatingQR
+          {/* <FloatingQR
             show={showQR}
             onClick={onShowQR}
             onHide={onHideQR}
             place={placeName}
-          />
+          /> */}
           <FloatingToggleMusic toggle={toggle} playing={playing} />
           {visibleScrollTop && <FloatingScrollUp onClick={goScrollUp} />}
           <ModalProtocol show={showProtocol} place={placeName} />

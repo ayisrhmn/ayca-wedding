@@ -84,6 +84,7 @@ const GreetingsSection = () => {
                 <Form.Label className="isform-label">Nama Kamu</Form.Label>
                 <Form.Control
                   name="name"
+                  disabled={true}
                   value={name}
                   className="isform-input"
                   type="text"
@@ -98,6 +99,7 @@ const GreetingsSection = () => {
                 </Form.Label>
                 <Form.Control
                   name="greeting"
+                  disabled={true}
                   value={greeting}
                   className="isform-input"
                   as="textarea"
@@ -110,7 +112,8 @@ const GreetingsSection = () => {
                 variant="light"
                 className="btn-greetings"
                 type="button"
-                disabled={loadSubmit}
+                // disabled={loadSubmit}
+                disabled={true}
                 onClick={() => onSubmit(name, greeting)}>
                 Kirim Ucapan
               </Button>
