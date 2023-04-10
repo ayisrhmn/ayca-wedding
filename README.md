@@ -10,3 +10,7 @@
 - Setup env first for web frontend `cd web; .env`
 - Run web frontend `yarn dev`, you may need to run `yarn install` to download required components
 - Access http://localhost:8080
+
+## Author
+
+Muhammad Fariz Rahman
