@@ -15,3 +15,7 @@ $ yarn dev
 $ yarn build
 $ yarn start
 ```
+
+## Author
+
+Muhammad Fariz Rahman
